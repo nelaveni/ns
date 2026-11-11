@@ -1,0 +1,24 @@
+name: github-demo
+on: 
+  push:
+      branches:
+         - master
+# defaults:
+#       run:
+#         working-directory: /githubaction
+jobs:
+  job-name:
+           runs-on: [self-hosted, test, Linux]
+           steps:
+             #- uses: actions/checkout@v3
+              # with:
+               #  fetch-depth: 0
+      #   with:
+      #    path: ./../../../../githubaction
+      # - run:
+      #     working-directory: /githubaction
+             - run:  bash /githubaction/CI-CD.sh
+
+                 
+               
+             
